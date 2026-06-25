@@ -3,15 +3,15 @@ import produtosEcommerce from '../Arquivos/ListaItens.js'
 
 function Vitrine() {
   return (
-    <div>
+    <div className='container'>
 
-        { produtosEcommerce.map((e) =>
+        { produtosEcommerce.map((e) =>(
         
-            <div key={e.id}> 
-        
+            <div className='card' key={e.id}> 
+                <h2>{e.title}</h2>
             </div>
         
-        ) }
+        )) }
       
     </div>
   )

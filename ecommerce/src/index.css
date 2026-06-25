@@ -29,3 +29,14 @@ html, body, #root {
   height: 100%;
   padding: 0 80px;
 }
+
+.card {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(221, 9, 9);
+}
+.container {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 10px;
+}

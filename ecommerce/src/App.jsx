@@ -3,6 +3,7 @@ import './App.css'
 import Header from './Components/Header'
 import Main from './Components/Main'
 import Footer from './Components/Footer'
+import Vitrine from './Components/Vitrine'
 
 function App() {
   return (
