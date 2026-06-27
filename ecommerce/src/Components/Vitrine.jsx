@@ -9,6 +9,8 @@ function Vitrine() {
         
             <div className='card' key={e.id}> 
                 <h2>{e.title}</h2>
+                <h3>{e.price}</h3>
+                <h4>{e.description}</h4>
             </div>
         
         )) }
