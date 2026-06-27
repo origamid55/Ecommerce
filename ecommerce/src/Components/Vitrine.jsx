@@ -8,8 +8,12 @@ function Vitrine() {
         { produtosEcommerce.map((e) =>(
         
             <div className='card' key={e.id}> 
+                <img src={e.image} onError={(event) => {
+    event.currentTarget.src = "https://placehold.co/600x400?text=Produto+Sem+Foto";
+  }}></img>
                 <h2>{e.title}</h2>
-                <h3>{e.price}</h3>
+                <h3> R$ {e.price}</h3>
+                <br></br>
                 <h4>{e.description}</h4>
             </div>
         
