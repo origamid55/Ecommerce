@@ -16,7 +16,7 @@ function Vitrine() {
                 <div className='titulo'><h2>{e.title}</h2></div>
                 <h3> R$ {e.price}</h3>
                 <br></br>
-                <h4>{e.description}</h4>
+                <div className='divh4'> <h4>{e.description}</h4></div>
                 <div className='button'><button>Adicionar ao carrinho</button></div>
             </div>
         

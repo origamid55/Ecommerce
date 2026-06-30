@@ -32,7 +32,7 @@ html, body, #root {
 
 .card {
   width: 245px;
-  height: 500px;
+  height: 580px;
   background-color: rgb(235, 19, 19);
   max-width: 350px;
   padding: 20px 20px;
@@ -76,11 +76,17 @@ h4 {
   font-size: 17px;
   text-align: justify;
   hyphens: auto; /* Adiciona hífens automaticamente se a palavra for grande */
-  
+  height: 0px;
+}
+.divh4 {
+height: 800px;
 }
 
-.titulo {
+h2 , h3{
   height: 90px;
+}
+.button {
+  height: 80px;
 }
 
 .card:hover {
@@ -96,6 +102,16 @@ h4 {
 
 .button button {
   padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #920606;
+  color: rgb(216, 214, 214);
+  font-size: 16px;
+  border: none;
+}
+
+button:hover {
+ border: 1px solid rgb(90, 3, 3);
 }
 
 .img-container {
