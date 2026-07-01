@@ -15,7 +15,7 @@ const Header = () => {
            <h5>Loja virtual</h5>
         </div>
         <div>
-           <h2>carrinho {totalItens}</h2> 
+           <h2>Carrinho, quantidade de itens: {totalItens} - Valor total: </h2> 
         </div>
     
     </div>

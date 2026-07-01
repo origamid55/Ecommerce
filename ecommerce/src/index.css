@@ -82,9 +82,14 @@ h4 {
 height: 800px;
 }
 
-h2 , h3{
+h3{
   height: 90px;
 }
+
+.titulo h2{
+  height: 90px;
+}
+
 .button {
   height: 80px;
 }
