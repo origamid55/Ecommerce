@@ -1,9 +1,12 @@
 import React from 'react'
 import produtosEcommerce from '../Arquivos/ListaItens.js'
 import imagemPadrao from '../assets/sem-Foto.png'
+import { useCarrinho } from '../CarrinhoProvider.jsx'
 
 function Vitrine() {
-  return (
+const {adicionarAoCarrinho} = useCarrinho();
+
+return (
     <div className='container'>
 
         { produtosEcommerce.map((e) =>(
@@ -17,7 +20,7 @@ function Vitrine() {
                 <h3> R$ {e.price}</h3>
                 <br></br>
                 <div className='divh4'> <h4>{e.description}</h4></div>
-                <div className='button'><button>Adicionar ao carrinho</button></div>
+                <div className='button'><button onClick={() => adicionarAoCarrinho(e)}>Adicionar ao carrinho</button></div>
             </div>
         
         )) }
