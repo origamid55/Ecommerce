@@ -6,7 +6,10 @@ const Header = () => {
   const {itens} = useCarrinho();
 
   const totalItens = itens.reduce((a, item) => a + item.quantidade, 0);
+  const preco = itens.reduce((a, item) => {
 
+    return a + (item.quantidade * item.price);
+  },0);
   return (
     <div className='header'>
     <div className='header-container'>
@@ -15,7 +18,7 @@ const Header = () => {
            <h5>Loja virtual</h5>
         </div>
         <div>
-           <h2>Carrinho, quantidade de itens: {totalItens} - Valor total: </h2> 
+           <h2>Carrinho, quantidade de itens: {totalItens} - Valor total: R$ {preco.toFixed(2).replace(".", ",")}</h2> 
         </div>
     
     </div>
