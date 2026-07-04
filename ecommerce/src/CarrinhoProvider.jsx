@@ -27,6 +27,21 @@ export function CarrinhoProvider ({children}) {
 
         });
     };
+
+const removerCarrinho = (produtoId) => {
+    setItens((itensAtuais) => 
+        const itemExistente = itensAtuais.find((item) => item.id === produtoId.id);
+
+        if (itemExistente && itemExistente.quantidade > 1) {
+            itensAtuais.map((item) => 
+            item.id === produtoId.id ? {...item, item.quantidade: item.quantidade -1 } : item;
+            )
+        }
+    
+    )
+}
+
+
         return (
             <CarrinhoContext.Provider value={{ itens, adicionarAoCarrinho }}>
                 {children}
