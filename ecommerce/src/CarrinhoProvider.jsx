@@ -28,22 +28,24 @@ export function CarrinhoProvider ({children}) {
         });
     };
 
-const removerCarrinho = (produtoId) => {
-    setItens((itensAtuais) => 
-        const itemExistente = itensAtuais.find((item) => item.id === produtoId.id);
+const removerCarrinho = (produto) => {
+    setItens((itensAtuais) => {
+        const itemExistente = itensAtuais.find((item) => item.id === produto.id);
 
         if (itemExistente && itemExistente.quantidade > 1) {
-            itensAtuais.map((item) => 
-            item.id === produtoId.id ? {...item, item.quantidade: item.quantidade -1 } : item;
-            )
+            return itensAtuais.map((item) => { 
+            return item.id === produto.id ? {...item, quantidade: item.quantidade -1 } : item;
+            })
         }
+
+        return itensAtuais.filter((item) => item.id !== produto.id)
     
-    )
+    })
 }
 
 
         return (
-            <CarrinhoContext.Provider value={{ itens, adicionarAoCarrinho }}>
+            <CarrinhoContext.Provider value={{ itens, adicionarAoCarrinho, removerCarrinho }}>
                 {children}
             </CarrinhoContext.Provider>
         );
