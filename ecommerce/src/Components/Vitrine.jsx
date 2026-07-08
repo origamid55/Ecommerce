@@ -2,7 +2,6 @@ import React from 'react'
 import produtosEcommerce from '../Arquivos/ListaItens.js'
 import imagemPadrao from '../assets/sem-Foto.png'
 import { useCarrinho } from '../CarrinhoProvider.jsx'
-import Carrinho from './Carrinho.jsx';
 
 function Vitrine() {
 const {adicionarAoCarrinho} = useCarrinho();
@@ -25,7 +24,6 @@ return (
             </div>
         
         )) }
-      <Carrinho/>
     </div>
   )
 }
