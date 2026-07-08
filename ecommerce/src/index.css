@@ -131,11 +131,28 @@ button:hover {
 }
 
 .containercarrinho {
-margin: 0 auto;
+margin-left: 120px;
 background-color: #e71414;
-width: 1100px;
+width: 600px;
 height: 600px;
 }
 .containercarrinho2 {
   margin: 0 auto;
+  width: 400px;
+}
+
+.containermax {
+display: flex;
+}
+
+.containercarrinhofinal {
+  margin-left: 40px;
+  background-color: #920606;
+  width: 400px;
+  height: 350px;
+}
+
+.containercarrinhofinal2 {
+margin: 0 auto;
+width: 300px;
 }

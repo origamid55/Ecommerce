@@ -6,6 +6,7 @@ export default function Carrinho() {
     const {itens, adicionarAoCarrinho, removerCarrinho} = useCarrinho();
 
   return (
+    <div className='containermax'>
     <div className='containercarrinho'>
         <div className='containercarrinho2'>
             <div className='itenscarrinho'>Itens carrinho</div>
@@ -22,6 +23,11 @@ export default function Carrinho() {
 
              </div>
     </div>
-    
+    <div className='containercarrinhofinal'>
+        <div className='containercarrinhofinal2'>
+            <div className='itenscarrinho'>Itens carrinho</div>
+        </div>
+    </div>
+    </div>
   )
 }
