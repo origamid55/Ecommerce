@@ -136,7 +136,7 @@ width: 600px;
 height auto;
 }
 .containercarrinho2 {
-  margin: 0 auto;
+  margin-left: 40px;
   width: 400px;
   padding: 60px 0;
 }
@@ -156,4 +156,12 @@ display: flex;
 margin: 0 auto;
 width: 300px;
 padding: 60px 0;
+}
+
+.itensfundo {
+  background-color: rgb(216, 216, 216);
+  margin-bottom: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  width: 500px;
 }

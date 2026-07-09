@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCarrinho } from '../CarrinhoProvider'
+import imagemPadrao from '../assets/sem-Foto.png'
 
 export default function Carrinho() {
 
@@ -10,19 +11,27 @@ export default function Carrinho() {
     <div className='containercarrinho'>
         <div className='containercarrinho2'>
             <div className='itenscarrinho'>Itens carrinho</div>
+             <div>
                 {itens.map((item) => (
-                <div style={{height: 130}}>
+                <div className='itensfundo' style={{height: 150}}>
                 <div key={item.id}>
+                    <div style={{ display: 'flex'}}>
+                    <div style={{marginRight: '8px'}}><img style={{width:80, height: 80}} src={item.image} onError={(event) => {
+                        event.currentTarget.src = imagemPadrao }}/></div>
+                    <div>
                     <h2>{item.title}</h2>
                     <p style={{ margin:'10px 0'}}>Quantidade: {item.quantidade} /Total: {item.quantidade * item.price}</p>
                     <div style={{ margin:'10px 0'}}>
                     <button style={{marginRight: 10}} onClick={() => adicionarAoCarrinho(item)}>Adicionar + </button>
                     <button onClick={() => removerCarrinho(item)}> Remover - </button>
                     </div>
+                    </div>
+                    </div>
                 </div>
                 </div>
+                
             ))}
-
+             </div>
              </div>
     </div>
     <div className='containercarrinhofinal'>
