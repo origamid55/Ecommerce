@@ -125,20 +125,20 @@ button:hover {
 }
 
 .itenscarrinho {
-  margin-top: 50px ;
-  margin-bottom: 50px;
-  font-size: 40px;
+  margin-bottom: 20px;
+  font-size: 35px;
 }
 
 .containercarrinho {
 margin-left: 120px;
 background-color: #e71414;
 width: 600px;
-height: 600px;
+height auto;
 }
 .containercarrinho2 {
   margin: 0 auto;
   width: 400px;
+  padding: 60px 0;
 }
 
 .containermax {
@@ -155,4 +155,5 @@ display: flex;
 .containercarrinhofinal2 {
 margin: 0 auto;
 width: 300px;
+padding: 60px 0;
 }

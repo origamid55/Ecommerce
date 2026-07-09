@@ -11,21 +11,23 @@ export default function Carrinho() {
         <div className='containercarrinho2'>
             <div className='itenscarrinho'>Itens carrinho</div>
                 {itens.map((item) => (
+                <div style={{height: 130}}>
                 <div key={item.id}>
                     <h2>{item.title}</h2>
-                    <p>Quantidade: {item.quantidade}</p>
-                     <p>Total: {item.quantidade * item.price}</p>
-                    <button onClick={() => adicionarAoCarrinho(item)}>Adicionar + </button>
+                    <p style={{ margin:'10px 0'}}>Quantidade: {item.quantidade} /Total: {item.quantidade * item.price}</p>
+                    <div style={{ margin:'10px 0'}}>
+                    <button style={{marginRight: 10}} onClick={() => adicionarAoCarrinho(item)}>Adicionar + </button>
                     <button onClick={() => removerCarrinho(item)}> Remover - </button>
+                    </div>
                 </div>
-
+                </div>
             ))}
 
              </div>
     </div>
     <div className='containercarrinhofinal'>
         <div className='containercarrinhofinal2'>
-            <div className='itenscarrinho'>Itens carrinho</div>
+            <div className='itenscarrinho'>Resumo da compra</div>
         </div>
     </div>
     </div>
