@@ -61,6 +61,10 @@ img {
   object-fit: cover;
 }
 
+.imgcarrinho {
+   border: 2px solid black;
+}
+
 .footer {
   margin-top: 50px;
 }

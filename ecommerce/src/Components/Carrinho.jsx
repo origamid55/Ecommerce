@@ -15,11 +15,11 @@ export default function Carrinho() {
                 {itens.map((item) => (
                 <div className='itensfundo' style={{height: 150}}>
                 <div key={item.id}>
-                    <div style={{ display: 'flex'}}>
-                    <div style={{marginRight: '8px'}}><img style={{width:80, height: 80}} src={item.image} onError={(event) => {
+                    <div style={{ display: 'flex', alignItems:'center'}}>
+                    <div style={{marginRight: '8px', flexShrink: 0}}><img className='imgcarrinho' style={{width:90, height: 90 }} src={item.image} onError={(event) => {
                         event.currentTarget.src = imagemPadrao }}/></div>
                     <div>
-                    <h2>{item.title}</h2>
+                    <h2 style={{fontSize: 18}} >{item.title}</h2>
                     <p style={{ margin:'10px 0'}}>Quantidade: {item.quantidade} /Total: {item.quantidade * item.price}</p>
                     <div style={{ margin:'10px 0'}}>
                     <button style={{marginRight: 10}} onClick={() => adicionarAoCarrinho(item)}>Adicionar + </button>
