@@ -6,11 +6,16 @@ export default function Carrinho() {
 
     const {itens, adicionarAoCarrinho, removerCarrinho} = useCarrinho();
 
+        {itens.reduce((a, b) => { 
+                return  a + b.price;
+            }, 0)} 
+
+
   return (
     <div className='containermax'>
     <div className='containercarrinho'>
         <div className='containercarrinho2'>
-            <div className='itenscarrinho'>Itens carrinho</div>
+            <div style={{marginLeft: 150 }} className='itenscarrinho'>Itens carrinho</div>
              <div>
                 {itens.map((item) => (
                 <div className='itensfundo' style={{height: 150}}>
@@ -20,10 +25,10 @@ export default function Carrinho() {
                         event.currentTarget.src = imagemPadrao }}/></div>
                     <div>
                     <h2 style={{fontSize: 18}} >{item.title}</h2>
-                    <p style={{ margin:'10px 0'}}>Quantidade: {item.quantidade} /Total: {item.quantidade * item.price}</p>
+                    <p style={{ margin:'10px 0', fontSize: 17 }}>Quantidade: {item.quantidade} / Total: R$ {item.quantidade * item.price}</p>
                     <div style={{ margin:'10px 0'}}>
-                    <button style={{marginRight: 10}} onClick={() => adicionarAoCarrinho(item)}>Adicionar + </button>
-                    <button onClick={() => removerCarrinho(item)}> Remover - </button>
+                    <button className='botaocarrinho' style={{marginRight: 10}} onClick={() => adicionarAoCarrinho(item)}>Adicionar + </button>
+                    <button className='botaocarrinho' onClick={() => removerCarrinho(item)}> Remover - </button>
                     </div>
                     </div>
                     </div>
@@ -37,6 +42,7 @@ export default function Carrinho() {
     <div className='containercarrinhofinal'>
         <div className='containercarrinhofinal2'>
             <div className='itenscarrinho'>Resumo da compra</div>
+            <div>  </div>
         </div>
     </div>
     </div>
