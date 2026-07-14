@@ -131,6 +131,7 @@ h3{
 .itenscarrinho {
   margin-bottom: 30px;
   font-size: 35px;
+  color: rgb(238, 226, 226);
 }
 
 .containercarrinho {
@@ -151,7 +152,7 @@ display: flex;
 
 .containercarrinhofinal {
   margin-left: 40px;
-  background-color: #920606;
+  background-color: #b91b1b;
   width: 400px;
   height: 350px;
 }
@@ -175,4 +176,13 @@ padding: 60px 0;
   color: rgb(255, 255, 255);
   padding: 5px;
   border: none;
+}
+
+.fundocarrinhofinal {  
+  background-color: rgb(216, 216, 216);
+  margin-bottom: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  width: 250px;
+  font-size: 18px;
 }

@@ -6,10 +6,13 @@ export default function Carrinho() {
 
     const {itens, adicionarAoCarrinho, removerCarrinho} = useCarrinho();
 
-        {itens.reduce((a, b) => { 
-                return  a + b.price;
-            }, 0)} 
+    const precoFinal = itens.reduce((a, b) => { 
+                return  a + (b.price * b.quantidade);
+            }, 0)
 
+    const quantidadefinal = itens.reduce((a ,b) => {
+                return a + b.quantidade;
+    }, 0)
 
   return (
     <div className='containermax'>
@@ -42,7 +45,11 @@ export default function Carrinho() {
     <div className='containercarrinhofinal'>
         <div className='containercarrinhofinal2'>
             <div className='itenscarrinho'>Resumo da compra</div>
-            <div>  </div>
+      <div className='fundocarrinhofinal'>
+            <div>Preço final: {precoFinal.toFixed(2)} </div>
+            <div>Quantidade final: {quantidadefinal} </div>
+      </div>
+       
         </div>
     </div>
     </div>
