@@ -15,7 +15,7 @@ export default function Carrinho() {
     }, 0)
 
   return (
-    <div className='containermax'>
+    <div style={{marginTop:40}} className='containermax'>
     <div className='containercarrinho'>
         <div className='containercarrinho2'>
             <div style={{marginLeft: 150 }} className='itenscarrinho'>Itens carrinho</div>

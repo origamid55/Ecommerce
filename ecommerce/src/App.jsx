@@ -12,7 +12,6 @@ function App() {
   <>
   <Header/>
   <nav>
-  <Link to="/carrinho">Carrinho</Link>
   </nav>
   <Routes>
     <Route path="/" element={<Main/>}/>

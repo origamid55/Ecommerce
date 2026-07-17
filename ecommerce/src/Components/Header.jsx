@@ -21,11 +21,28 @@ const Header = () => {
   <Link to="/"><h1>Ecommerce - empresa XPTO</h1> </Link>
            <h5>Loja virtual</h5>
         </div>
-        <div>
-          <img src={iconeCarrinho} />
-           <p><b>Quantidade de itens: </b><i>{totalItens}</i></p> 
-           <p><b>Valor total:</b> <i>R$ {preco.toFixed(2).replace(".", ",")}</i></p> 
-        </div>
+        <div style={{display:'flex', alignItems: 'center', justifyContent: 'center', gap: 20}}>
+
+          
+          <div style={{ }}>
+            <p><b>Valor total:</b> <i>R$ {preco.toFixed(2).replace(".", ",")}</i></p> 
+          </div>
+          <div>
+            
+          <Link to="/carrinho">
+          <div style={{position: 'relative'}}>
+          <img style={{ border: 0, width: 50, height: 50}} src={iconeCarrinho} />
+        { totalItens > 0 ? <div style={{position: 'absolute', top: 10, left: -5,  backgroundColor: 'white', height: 20, width: 20, borderRadius: '50%', display:'flex', fontSize: 14, alignItems: 'center',
+    justifyContent: 'center'}}> {totalItens} </div> : null
+          
+        }
+          
+          </div>
+          </Link>
+            
+          </div>
+          
+          </div>
     
     </div>
     </div>
