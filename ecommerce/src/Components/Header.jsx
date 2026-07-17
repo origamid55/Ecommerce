@@ -1,6 +1,9 @@
 import React from 'react'
 import '../index.css'
 import { useCarrinho } from '../CarrinhoProvider';
+import { Link } from 'react-router-dom';
+import iconeCarrinho from '../assets/carrinho.webp'
+
 const Header = () => {
 
   const {itens} = useCarrinho();
@@ -14,11 +17,14 @@ const Header = () => {
     <div className='header'>
     <div className='header-container'>
         <div>
-           <h1>Ecommerce - empresa XPTO</h1> 
+           
+  <Link to="/"><h1>Ecommerce - empresa XPTO</h1> </Link>
            <h5>Loja virtual</h5>
         </div>
         <div>
-           <h2>Carrinho, quantidade de itens: {totalItens} - Valor total: R$ {preco.toFixed(2).replace(".", ",")}</h2> 
+          <img src={iconeCarrinho} />
+           <p><b>Quantidade de itens: </b><i>{totalItens}</i></p> 
+           <p><b>Valor total:</b> <i>R$ {preco.toFixed(2).replace(".", ",")}</i></p> 
         </div>
     
     </div>
