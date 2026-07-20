@@ -4,7 +4,7 @@ import '../index.css'
 const Footer = () => {
   return (
     <div className='footer'>
-      footer
+     <div className='textofooter'>Todos os direitos reservados.</div> 
     </div>
   )
 }
