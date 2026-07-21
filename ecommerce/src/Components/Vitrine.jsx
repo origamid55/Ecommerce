@@ -2,6 +2,7 @@ import React from 'react'
 import produtosEcommerce from '../Arquivos/ListaItens.js'
 import imagemPadrao from '../assets/sem-Foto.png'
 import { useCarrinho } from '../CarrinhoProvider.jsx'
+import { Link } from 'react-router-dom'
 
 function Vitrine() {
 const {adicionarAoCarrinho} = useCarrinho();
@@ -21,8 +22,11 @@ return (
                 <br></br>
                 <div className='divh4'> <h4>{e.description}</h4></div>
                 <div className='button'><button onClick={() => adicionarAoCarrinho(e)}>Adicionar ao carrinho</button></div>
-               <Link to={'/produto/${produto.id}'} > <div className='button' style={{marginTop: 0}}><button>Ver mais detalhes</button> </div>
-               </Link>
+               <div className='button' style={{marginTop: 0}}>
+                 <Link to={`/produto/${e.id}`}>
+                <button>Ver mais detalhes</button>
+                </Link>
+                 </div>
             </div>
         
         )) }

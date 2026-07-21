@@ -6,6 +6,8 @@ import Footer from './Components/Footer'
 import Vitrine from './Components/Vitrine'
 import { Link, Route, Routes } from 'react-router-dom'
 import Carrinho from './Components/Carrinho'
+import DetalhesProduto from './Components/DetalhesProduto'
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
   <Routes>
     <Route path="/" element={<Main/>}/>
     <Route path="/carrinho" element={<Carrinho/>}/>
+    <Route path="/produto/:id" element={<DetalhesProduto/>}/>
   </Routes>
   
   
