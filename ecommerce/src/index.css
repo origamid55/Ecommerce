@@ -209,3 +209,19 @@ padding: 60px 0;
   width: 250px;
   font-size: 18px;
 }
+
+.descricaocontainer {
+  margin: 0 auto;
+  font-size: 17px;
+  padding: 100px 0px;
+  
+  display: flex;
+  gap: 80px;
+}
+
+.descricaocontainer b {
+  font-size: 19px;
+}
+.descricaocontainer p {
+  margin-bottom: 10px;
+}
