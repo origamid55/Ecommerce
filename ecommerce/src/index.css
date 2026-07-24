@@ -65,7 +65,7 @@ img {
   width: 190px;
   height: 150px;
   margin-bottom: 20px;
-  border: 3px solid black;
+  border: 2px solid black;
   margin-top: 10px;
   object-fit: cover;
 }
@@ -213,10 +213,14 @@ padding: 60px 0;
 .descricaocontainer {
   margin: 0 auto;
   font-size: 17px;
-  padding: 100px 0px;
   
   display: flex;
-  gap: 80px;
+width: 1200px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 20px;
+  padding-top: 100px;
 }
 
 .descricaocontainer b {

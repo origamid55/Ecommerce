@@ -19,22 +19,29 @@ const DetalhesProduto = () => {
         )
     }
   return (
+    <>
     <div className='descricaocontainer'>
-        <div>
-            <p> <img style={{width: 350, height: 350}} src={produto.image}></img></p> </div>
-        <div style={{flexBasis: 430}}>
-            <p> <b>Nome do item:</b>  {produto.title} </p>  
-            <p> <b>Descrição:</b> {produto.description} </p>  
-            
+        <div style={{flex: '100%'}}>
+        <b> <p style={{fontSize: 35}}> {produto.title}  </p> </b>
+        </div>
+        <div style={{ flex: 1 }}>
+            <p> <img style={{width: 350, height: 350}} src={produto.image}></img></p>
+       </div>
+       
+        <div style={{flex: 3}}>  
+            <p> <b>Descrição:</b> {produto.description} </p>         
             <p> <b>Categoria:</b> {produto.category}</p> 
             <p> <b>Rating:</b> {produto.rating}</p>  
-      </div>
-      <div>
+        </div>
+     
+        <div style={{ flex: 1}}>
             <p> <b>Preço:</b> {produto.price}</p> 
             <p><Link to='/'> Voltar pagina anterior </Link></p> 
             <div className='button'> <button onClick={() => adicionarAoCarrinho(produto)}>Adicionar ao Carrinho</button></div>
-      </div>
+        </div>
+    
     </div>
+    </>
   )
 }
 
