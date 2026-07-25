@@ -36,7 +36,7 @@ const DetalhesProduto = () => {
      
         <div style={{ flex: 1}}>
             <p> <b>Preço:</b> {produto.price}</p> 
-            <p><Link to='/'> Voltar pagina anterior </Link></p> 
+            <p style={{padding: '13px 15px' , fontSize: 14 , backgroundColor: '#920606', color: 'white', width: 180, borderRadius: 5}}><Link to='/'>  Voltar pagina anterior </Link></p> 
             <div className='button'> <button onClick={() => adicionarAoCarrinho(produto)}>Adicionar ao Carrinho</button></div>
         </div>
     
