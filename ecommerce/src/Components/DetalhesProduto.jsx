@@ -8,7 +8,6 @@ const DetalhesProduto = () => {
     const {adicionarAoCarrinho, removerCarrinho, itens} = useCarrinho();
     const {id} = useParams();
     const produto = Listaitens.find((e) => String(e.id) === String(id));
-    const produto2 = itens.find((i)=> String(i.id) === String(produto.id)); 
     
     if (!produto) {
         return (
@@ -39,7 +38,11 @@ const DetalhesProduto = () => {
      
         <div style={{ flex: 1}}>
             <p> <b>Preço:</b> R$ {produto.price}</p>  
-            <p>Quantidades adicionadas: {produto2.quantidade} </p>
+            <p>Quantidades adicionadas: {itens.map((i)=> {
+             if (i.title === produto.title) {return (i.quantidade)}
+        
+        })}
+         </p>
             <div className='button'> <button onClick={() => adicionarAoCarrinho(produto)}>Adicionar ao Carrinho</button></div>
             <button> <Link to='/'>  Voltar pagina anterior </Link></button>
             <button onClick={() => removerCarrinho(produto)}>Remover item</button>
