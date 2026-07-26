@@ -32,7 +32,7 @@ const Header = () => {
           <Link to="/carrinho">
           <div style={{position: 'relative'}}>
           <img style={{ border: 0, width: 50, height: 50}} src={iconeCarrinho} />
-        { totalItens > 0 ? <div style={{position: 'absolute', top: 10, left: -5,  backgroundColor: 'white', height: 20, width: 20, borderRadius: '50%', display:'flex', fontSize: 14, alignItems: 'center',
+        { totalItens > 0 ? <div style={{position: 'absolute', top: 6, left: -5,  backgroundColor: 'white', height: 25, width: 25, borderRadius: '50%', display:'flex', fontSize: 14, alignItems: 'center',
     justifyContent: 'center'}}> {totalItens} </div> : null
           
         }

@@ -46,7 +46,7 @@ a {
   background-color: rgb(235, 19, 19);
   max-width: 350px;
   padding: 20px 20px;
-  border: 3px solid black;
+  border: 1px solid black;
   box-shadow: 2px 4px 8px rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
@@ -72,7 +72,7 @@ img {
 }
 
 .imgcarrinho {
-   border: 2px solid black;
+   border: 1px solid black;
 }
 
 .footer {
@@ -89,6 +89,10 @@ img {
   font-size: 20px;
 }
 
+h2{
+  font-size: 23px;
+}
+
 h3 {
   color: #ccc9c9;
   align-self: self-start ;
@@ -97,10 +101,11 @@ h3 {
 
 h4 {
   margin-top: 20px;
-  font-size: 17px;
+  font-size: 16px;
   text-align: justify;
   hyphens: auto; /* Adiciona hífens automaticamente se a palavra for grande */
   height: 0px;
+  font-weight:bold;
 }
 .divh4 {
 height: 800px;
@@ -114,37 +119,29 @@ h3{
   height: 90px;
 }
 
-.button {
-  height: 80px;
-}
+
 
 .card:hover {
   background-color: rgb(204, 6, 6);
   cursor: pointer;
-  border: 3px solid rgb(204, 6, 6);
 }
 
-.button {
-  margin-top: 30px;
+button {
   margin-bottom: 20px;
-}
-
-.button button {
   padding: 13px;
   border-radius: 5px;
   cursor: pointer;
   background-color: #920606;
-  
- border: 1px solid #920606;
+  border: none;
   color: rgb(216, 214, 214);
   font-size: 14px;
   width: 180px;
   transition: border 0.2s ease;
 }
 
-.button button:hover {
- border: 1px solid rgb(90, 3, 3);
-  border-radius: 5px;
+button:hover {
+ background-color: rgb(90, 3, 3);
+ border-radius: 5px;
 }
 
 .img-container {
@@ -199,7 +196,8 @@ padding: 60px 0;
   background-color: rgb(255, 0, 0);
   color: rgb(255, 255, 255);
   padding: 5px;
-  border: none;
+  border-color: rgb(255, 0, 0);
+  width: 150px;
 }
 
 .fundocarrinhofinal {  
@@ -214,12 +212,10 @@ padding: 60px 0;
 .descricaocontainer {
   margin: 0 auto;
   font-size: 17px;
-  
   display: flex;
-width: 1200px;
+  width: 1200px;
   flex-wrap: wrap;
   justify-content: center;
-
   gap: 20px;
   padding-top: 100px;
 }
@@ -229,4 +225,8 @@ width: 1200px;
 }
 .descricaocontainer p {
   margin-bottom: 10px;
+}
+
+button:active {
+  background-color: #360101;
 }

@@ -28,8 +28,8 @@ export default function Carrinho() {
                         event.currentTarget.src = imagemPadrao }}/></div>
                     <div>
                     <h2 style={{fontSize: 18}} >{item.title}</h2>
-                    <p style={{ margin:'10px 0', fontSize: 17 }}>Quantidade: {item.quantidade} / Total: R$ {item.quantidade * item.price}</p>
-                    <div style={{ margin:'10px 0'}}>
+                    <p style={{ margin:'10px 0', fontSize: 17 }}>Quantidade: {item.quantidade} / Total: R$ {(item.quantidade * item.price).toFixed(2)}</p>
+                    <div style={{ display: 'flex'}}>
                     <button className='botaocarrinho' style={{marginRight: 10}} onClick={() => adicionarAoCarrinho(item)}>Adicionar + </button>
                     <button className='botaocarrinho' onClick={() => removerCarrinho(item)}> Remover - </button>
                     </div>

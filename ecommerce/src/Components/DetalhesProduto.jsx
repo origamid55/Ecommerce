@@ -5,9 +5,11 @@ import { useCarrinho } from '../CarrinhoProvider'
 
 const DetalhesProduto = () => {
 
-    const {adicionarAoCarrinho} = useCarrinho();
+    const {adicionarAoCarrinho, removerCarrinho, itens} = useCarrinho();
     const {id} = useParams();
     const produto = Listaitens.find((e) => String(e.id) === String(id));
+    const produto2 = itens.find((i)=> i.id === produto.id); 
+    
     if (!produto) {
         return (
         <div>
@@ -35,9 +37,13 @@ const DetalhesProduto = () => {
         </div>
      
         <div style={{ flex: 1}}>
-            <p> <b>Preço:</b> {produto.price}</p> 
-            <p style={{padding: '13px 15px' , fontSize: 14 , backgroundColor: '#920606', color: 'white', width: 180, borderRadius: 5}}><Link to='/'>  Voltar pagina anterior </Link></p> 
+            <p> <b>Preço:</b> R$ {produto.price}</p>  
+            <p>Quantidades adicionadas: {
+            } </p>
             <div className='button'> <button onClick={() => adicionarAoCarrinho(produto)}>Adicionar ao Carrinho</button></div>
+            <button> <Link to='/'>  Voltar pagina anterior </Link></button>
+            <button onClick={() => removerCarrinho(produto)}>Remover item</button>
+        
         </div>
     
     </div>
