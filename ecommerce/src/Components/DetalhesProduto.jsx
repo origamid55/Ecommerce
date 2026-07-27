@@ -39,7 +39,7 @@ const DetalhesProduto = () => {
         <div style={{ flex: 1}}>
             <p> <b>Preço:</b> R$ {produto.price}</p>  
             <p>Quantidades adicionadas: {itens.map((i)=> {
-             if (i.title === produto.title) {return (i.quantidade)}
+             if (i.title === produto.title) {return i.quantidade}
         
         })}
          </p>
