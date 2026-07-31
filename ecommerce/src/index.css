@@ -150,12 +150,12 @@ button:hover {
 
 .itenscarrinho {
   margin-bottom: 30px;
-  font-size: 35px;
+  font-size: 25px;
   color: rgb(238, 226, 226);
 }
 
 .containercarrinho {
-margin-left: 100px;
+margin-left: 70px;
 background-color: #e71414;
 width: 50%;
 height auto;
@@ -180,6 +180,7 @@ width: 90%;
 
 .containercarrinhofinal2 {
 margin: 0 auto;
+margin-left: 50px;
 width: 50%;
 padding: 60px 0;
 }
@@ -205,10 +206,11 @@ padding: 60px 0;
 .fundocarrinhofinal {  
   background-color: rgb(216, 216, 216);
   margin-bottom: 20px;
-  padding: 25px;
+  padding: 15px;
+  padding-right: 25px;
   border-radius: 10px;
-  width: 100%;
-  font-size: 18px;
+  width: 120%;
+  font-size: 16px;
 }
 
 .descricaocontainer {
