@@ -46,8 +46,9 @@ export default function Carrinho() {
         <div className='containercarrinhofinal2'>
             <div className='itenscarrinho'>Resumo da compra</div>
       <div className='fundocarrinhofinal'>
-            <div>Preço final: R$ {precoFinal.toFixed(2)} </div>
-            <div>Quantidade final: {quantidadefinal} </div>
+            <div>Preço final: <br/> R$ {precoFinal.toFixed(2)} </div>
+            <br/>
+            <div>Quantidade final: <br/> {quantidadefinal} </div>
       </div>
        
         </div>
