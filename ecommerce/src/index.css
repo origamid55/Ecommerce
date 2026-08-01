@@ -149,7 +149,9 @@ button:hover {
 }
 
 .itenscarrinho {
+  margin: 0 auto;
   margin-bottom: 30px;
+  width: 170px;
   font-size: 25px;
   color: rgb(238, 226, 226);
 }
@@ -161,20 +163,22 @@ width: 50%;
 height auto;
 }
 .containercarrinho2 {
-  margin-left: 50px;
+  margin:0 auto;
   width: 85%;
   padding: 60px 0;
 }
 
 .containermax {
 display: flex;
-width: 90%;
+width: 100%;
+margin: 0 auto;
 }
 
 .containercarrinhofinal {
   margin-left: 40px;
   background-color: #b91b1b;
-  width: 50%;
+
+  width: 30%;
   height: 350px;
 }
 
@@ -203,6 +207,7 @@ padding: 60px 0;
   padding: 5px;
   border-color: rgb(255, 0, 0);
   width: 150px;
+  margin-bottom: 10px;
 }
 
 .fundocarrinhofinal {  
@@ -240,4 +245,10 @@ button:active {
 
 .button {
   width: 200px;
+}
+
+@media (max-width: 1012px) {
+  .imgcarrinho {
+    display: none;
+  }
 }

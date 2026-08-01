@@ -18,7 +18,7 @@ export default function Carrinho() {
     <div style={{marginTop:40}} className='containermax'>
     <div className='containercarrinho'>
         <div className='containercarrinho2'>
-            <div style={{marginLeft: 150 }} className='itenscarrinho'>Itens carrinho</div>
+            <div className='itenscarrinho'>Itens carrinho</div>
              <div>
                 {itens.map((item) => (
                 <div className='itensfundo'>
@@ -28,7 +28,7 @@ export default function Carrinho() {
                         event.currentTarget.src = imagemPadrao }}/></div>
                     <div>
                     <h2 style={{fontSize: 18, width: '90%'}} >{item.title}</h2>
-                    <p style={{ margin:'10px 0', fontSize: 17 }}>Quantidade: {item.quantidade} / Total: R$ {(item.quantidade * item.price).toFixed(2)}</p>
+                    <p style={{ margin:'10px 0', fontSize: 17 }}>Preço: {item.price} <br/> Quantidade: {item.quantidade} <br/> Total: R$ {(item.quantidade * item.price).toFixed(2)}</p>
                     <div style={{ display: 'flex', flexWrap: 'wrap'}}>
                     <button className='botaocarrinho' style={{marginRight: 10}} onClick={() => adicionarAoCarrinho(item)}>Adicionar + </button>
                     <button className='botaocarrinho' onClick={() => removerCarrinho(item)}> Remover - </button>
@@ -43,8 +43,9 @@ export default function Carrinho() {
              </div>
     </div>
     <div className='containercarrinhofinal'>
+
         <div className='containercarrinhofinal2'>
-            <div className='itenscarrinho'>Resumo da compra</div>
+            <div style={{width: '150%'}} className='itenscarrinho'>Resumo da compra</div>
       <div className='fundocarrinhofinal'>
             <div>Preço final: <br/> R$ {precoFinal.toFixed(2)} </div>
             <br/>
@@ -52,6 +53,7 @@ export default function Carrinho() {
       </div>
        
         </div>
+   
     </div>
     </div>
   )
