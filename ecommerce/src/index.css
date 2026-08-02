@@ -252,3 +252,44 @@ button:active {
     display: none;
   }
 }
+
+@media (max-width: 715px) {
+
+.containermax {
+  flex-direction: column-reverse;
+  width: 150%;
+}
+.containercarrinhofinal {
+  width: 50%;
+  margin-left: 70px;
+  margin-bottom: 10px;
+}
+  
+}
+
+@media (max-width: 500px) {
+ 
+  .containermax {
+    width: 100%;
+  }
+ 
+ .containercarrinhofinal, .containercarrinho {
+
+  width: 100%;
+  margin: 0 auto;
+
+ }
+ .header-container {
+  flex-wrap: wrap;
+ }
+
+ .header {
+  height: auto;
+  padding-top: 30px;
+ }
+  
+ .itensfundo, .fundocarrinhofinal{
+  width: 80%;
+ }
+
+}
