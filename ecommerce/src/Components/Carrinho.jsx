@@ -21,8 +21,8 @@ export default function Carrinho() {
             <div className='itenscarrinho'>Itens carrinho</div>
              <div>
                 {itens.map((item) => (
+                    <div key={item.id}>
                 <div className='itensfundo'>
-                <div key={item.id}>
                     <div style={{ display: 'flex', alignItems:'center'}}>
                     <div style={{marginRight: '8px', flexShrink: 0}}><img className='imgcarrinho' style={{width:90, height: 90 }} src={item.image} onError={(event) => {
                         event.currentTarget.src = imagemPadrao }}/></div>
